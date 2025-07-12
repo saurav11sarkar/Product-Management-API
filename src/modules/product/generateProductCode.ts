@@ -6,15 +6,18 @@ interface SubstringInfo {
   endIndex: number;
 }
 
-// Utility to generate random alphanumeric characters
-function generateRandomChars(length: number): string {
+// Get a deterministic string from hash to use as filler
+function generateDeterministicFill(productName: string, length: number): string {
+  const hash = crypto.createHash("sha256").update(productName).digest("hex");
   const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-  let result = "";
+  let filler = "";
+
   for (let i = 0; i < length; i++) {
-    const randIndex = Math.floor(Math.random() * chars.length);
-    result += chars[randIndex];
+    const index = parseInt(hash.slice(i * 2, i * 2 + 2), 16) % chars.length;
+    filler += chars[index];
   }
-  return result;
+
+  return filler;
 }
 
 // Finds all longest strictly increasing substrings
@@ -53,6 +56,7 @@ function findLongestIncreasingSubstrings(str: string): SubstringInfo[] {
   return substrings;
 }
 
+// ✅ FINAL FUNCTION
 export function generateProductCode(productName: string): string {
   const cleanedName = productName.toLowerCase().replace(/\s+/g, "");
   const hash = crypto.createHash("md5").update(cleanedName).digest("hex").slice(0, 7);
@@ -64,13 +68,12 @@ export function generateProductCode(productName: string): string {
 
   let middle = `${startIndex}${combinedSubstring}${endIndex}`;
 
-  // Total target length: 20 chars (7 + 1 + 12)
   const totalMiddleLength = 12;
   if (middle.length < totalMiddleLength) {
-    const filler = generateRandomChars(totalMiddleLength - middle.length);
+    const filler = generateDeterministicFill(cleanedName, totalMiddleLength - middle.length);
     middle += filler;
   } else if (middle.length > totalMiddleLength) {
-    middle = middle.slice(0, totalMiddleLength); // truncate to fixed length
+    middle = middle.slice(0, totalMiddleLength);
   }
 
   return `${hash}-${middle}`;
