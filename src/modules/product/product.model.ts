@@ -23,8 +23,11 @@ const productSchema = new Schema<IProduct>(
       min: [0, "Discount must be a positive number"],
       max: [100, "Discount cannot exceed 100%"],
     },
+    finalPrice: {
+      type: Number,
+    },
     imageUrl: {
-      type: String,
+      type: [String],
       trim: true,
     },
     status: {

@@ -1,7 +1,7 @@
 import catchAsycn from "../../utils/catchAsycn";
 import pick from "../../utils/pick";
 import sendResponse from "../../utils/sendResponse";
-import { categoryService } from "./category..service";
+import { categoryService } from "./category.service";
 
 const createCategory = catchAsycn(async (req, res) => {
   const result = await categoryService.createCategory(req.body);
