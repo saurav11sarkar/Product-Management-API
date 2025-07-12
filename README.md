@@ -12,7 +12,7 @@ A complete backend API for managing products and categories, built with **Node.j
 
 ## 📁 GitHub Repository
 
-🔗 [https://github.com/saurav11sarkar/note-organizer-application](https://github.com/saurav11sarkar/note-organizer-application)
+🔗 [https://github.com/saurav11sarkar/Product-Management-API.git](https://github.com/saurav11sarkar/Product-Management-API.git)
 
 ---
 
