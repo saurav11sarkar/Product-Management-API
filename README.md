@@ -79,8 +79,8 @@ CLODUE_API_SECRET=<your_cloudinary_api_secret>
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/saurav11sarkar/note-organizer-application.git
-cd note-organizer-application
+git clone https://github.com/saurav11sarkar/Product-Management-API.git
+cd Product-Management-API
 ```
 
 2. **Install dependencies:**
