@@ -404,6 +404,28 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Live URL Link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://product-management-system-orcin.vercel.app/api/v1/",
+					"protocol": "https",
+					"host": [
+						"product-management-system-orcin",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
