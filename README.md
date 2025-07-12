@@ -127,7 +127,7 @@ npm run dev
 ## 🧠 Author & Credit
 
 👤 **Saurav Sarkar**
-📧 [sauravdev2411@gmail.com](mailto:sauravdev2411@gmail.com)
+📧 [sarkar15-4285@diu.edu.bd](mailto:sarkar15-4285@diu.edu.bd)
 
 ---
 
