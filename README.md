@@ -6,7 +6,7 @@ A complete backend API for managing products and categories, built with **Node.j
 
 ## 🚀 Live API
 
-🔗 [https://product-management-system-orcin.vercel.app/api/v1/](https://product-management-system-orcin.vercel.app/api/v1/)
+🔗 [https://product-management-system-orcin.vercel.app](https://product-management-system-orcin.vercel.app)
 
 ---
 
