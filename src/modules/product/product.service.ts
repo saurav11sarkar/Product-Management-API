@@ -76,6 +76,7 @@ const getAllProduct = async (params: IProductFilters, options: any) => {
     andSerarchFild.length > 0 ? { $and: andSerarchFild } : {};
 
   const result = await Product.find(whereCondition)
+    .populate("category","name",)
     .sort({ [sortBy]: sortOrder as SortOrder })
     .skip(skip)
     .limit(limit);
